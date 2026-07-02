@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
-import { actions, dishName, useStore, t as tr, type Table } from "@/lib/horeca-store";
+import { actions, dishName, useStore, t as tr, type Table as HTable } from "@/lib/horeca-store";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
