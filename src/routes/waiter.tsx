@@ -38,7 +38,7 @@ function WaiterPage() {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const selected = tables.find((t) => t.id === selectedId) ?? null;
 
-  const statusLabel: Record<Table["status"], string> = {
+  const statusLabel: Record<HTable["status"], string> = {
     free: T("Вільний", "Free"),
     occupied: T("Зайнятий", "Occupied"),
     reserved: T("Бронь", "Reserved"),
@@ -92,16 +92,16 @@ function WaiterPage() {
 }
 
 function TableDialog({
-  table, onClose, allTables, orders,
+  table, onClose, allTables,
 }: {
-  table: Table | null;
+  table: HTable | null;
   onClose: () => void;
-  allTables: Table[];
-  orders: ReturnType<typeof useStore<typeof import("@/lib/horeca-store").store extends never ? never : any>> extends never ? never : any;
+  allTables: HTable[];
 }) {
   const lang = useStore((s) => s.lang);
   const dishes = useStore((s) => s.dishes);
   const categories = useStore((s) => s.categories);
+  const orders = useStore((s) => s.orders);
   const T = (uk: string, en: string) => tr(lang, uk, en);
 
   const [guests, setGuests] = useState(2);
@@ -109,8 +109,7 @@ function TableDialog({
   const [moveTo, setMoveTo] = useState<string>("");
 
   const tableOrders = useMemo(
-    () => (orders as ReturnType<typeof useStore<any>>[]).filter?.((o: any) => o.tableId === table?.id) as any[] ?? [],
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+    () => orders.filter((o) => o.tableId === table?.id),
     [orders, table?.id],
   );
 
