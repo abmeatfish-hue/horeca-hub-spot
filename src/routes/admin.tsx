@@ -37,6 +37,13 @@ function AdminPage() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-6">
+      <div className="mb-2 flex items-center gap-2">
+        <Link to="/">
+          <Button size="icon" variant="ghost" className="h-8 w-8 -ml-2">
+            <ArrowLeft className="h-5 w-5" />
+          </Button>
+        </Link>
+      </div>
       <h1 className="text-2xl font-bold">{T("Адмін-панель", "Admin panel")}</h1>
       <p className="mb-4 text-sm text-muted-foreground">
         {T("Аналітика, меню, персонал.", "Analytics, menu, staff.")}
