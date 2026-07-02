@@ -32,7 +32,6 @@ const statusColor = {
 function WaiterPage() {
   const lang = useStore((s) => s.lang);
   const tables = useStore((s) => s.tables);
-  const orders = useStore((s) => s.orders);
   const T = (uk: string, en: string) => tr(lang, uk, en);
 
   const [selectedId, setSelectedId] = useState<string | null>(null);
