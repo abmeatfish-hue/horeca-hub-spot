@@ -307,6 +307,3 @@ function ReservationDialog() {
     </Dialog>
   );
 }
-
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const _keepTextarea = Textarea;
