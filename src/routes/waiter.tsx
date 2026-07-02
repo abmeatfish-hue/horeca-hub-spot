@@ -85,7 +85,6 @@ function WaiterPage() {
         table={selected}
         onClose={() => setSelectedId(null)}
         allTables={tables}
-        orders={orders}
       />
     </div>
   );
