@@ -82,10 +82,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "HoReCa OS — керування рестораном" },
       { name: "description", content: "MVP системи керування для ресторанів, кафе та барів: QR-меню, зал, кухня, адмін." },
       { name: "author", content: "HoReCa OS" },
-      { property: "og:title", content: "HoReCa OS" },
-      { property: "og:description", content: "Система керування рестораном: QR-меню, зал, кухня, адмін." },
+      { property: "og:title", content: "HoReCa OS — керування рестораном" },
+      { property: "og:description", content: "MVP системи керування для ресторанів, кафе та барів: QR-меню, зал, кухня, адмін." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "HoReCa OS — керування рестораном" },
+      { name: "twitter:description", content: "MVP системи керування для ресторанів, кафе та барів: QR-меню, зал, кухня, адмін." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/5701c842-daca-4120-adab-7f7590953299/id-preview-c39e7f18--f8a71032-ae66-4fcb-b9e8-8a861fbeeb74.lovable.app-1783020909422.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/5701c842-daca-4120-adab-7f7590953299/id-preview-c39e7f18--f8a71032-ae66-4fcb-b9e8-8a861fbeeb74.lovable.app-1783020909422.png" },
     ],
     links: [
       {
