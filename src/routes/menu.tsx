@@ -17,7 +17,8 @@ import {
   Select, SelectContent, SelectItem, SelectTrigger, SelectValue,
 } from "@/components/ui/select";
 import { toast } from "sonner";
-import { ChefHat, Globe, Minus, Plus, ShoppingCart, CalendarClock, CreditCard } from "lucide-react";
+import { ChefHat, Globe, Minus, Plus, ShoppingCart, CalendarClock, CreditCard, ArrowLeft } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/menu")({
   head: () => ({

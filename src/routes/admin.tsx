@@ -18,7 +18,8 @@ import {
   Dialog, DialogContent, DialogFooter, DialogHeader, DialogTitle, DialogTrigger,
 } from "@/components/ui/dialog";
 import { toast } from "sonner";
-import { Plus, Trash2, TrendingUp, ShoppingBag, Users, Utensils } from "lucide-react";
+import { Plus, Trash2, TrendingUp, ShoppingBag, Users, Utensils, ArrowLeft } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/admin")({
   head: () => ({

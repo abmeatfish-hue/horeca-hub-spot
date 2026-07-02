@@ -11,7 +11,8 @@ import {
 } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { toast } from "sonner";
-import { Plus, Minus, Receipt, Users2, ArrowRightLeft } from "lucide-react";
+import { Plus, Minus, Receipt, Users2, ArrowRightLeft, ArrowLeft } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/waiter")({
   head: () => ({
