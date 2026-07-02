@@ -17,7 +17,8 @@ import {
   Select, SelectContent, SelectItem, SelectTrigger, SelectValue,
 } from "@/components/ui/select";
 import { toast } from "sonner";
-import { ChefHat, Globe, Minus, Plus, ShoppingCart, CalendarClock, CreditCard } from "lucide-react";
+import { ChefHat, Globe, Minus, Plus, ShoppingCart, CalendarClock, CreditCard, ArrowLeft } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/menu")({
   head: () => ({
@@ -69,6 +70,11 @@ function MenuPage() {
       {/* Client-facing header */}
       <header className="sticky top-0 z-30 border-b bg-card">
         <div className="mx-auto flex h-14 max-w-2xl items-center gap-2 px-4">
+          <Link to="/">
+            <Button size="icon" variant="ghost" className="h-8 w-8 -ml-2">
+              <ArrowLeft className="h-5 w-5" />
+            </Button>
+          </Link>
           <ChefHat className="h-5 w-5 text-primary" />
           <div className="text-sm font-semibold">HoReCa OS</div>
           <Badge variant="secondary" className="ml-1 text-[10px]">

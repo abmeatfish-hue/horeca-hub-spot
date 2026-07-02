@@ -11,7 +11,8 @@ import {
 } from "@/components/ui/dialog";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { toast } from "sonner";
-import { Plus, Minus, Receipt, Users2, ArrowRightLeft } from "lucide-react";
+import { Plus, Minus, Receipt, Users2, ArrowRightLeft, ArrowLeft } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/waiter")({
   head: () => ({
@@ -45,6 +46,13 @@ function WaiterPage() {
 
   return (
     <div className="mx-auto max-w-7xl px-4 py-6">
+      <div className="mb-4 flex items-center gap-2">
+        <Link to="/">
+          <Button size="icon" variant="ghost" className="h-8 w-8 -ml-2">
+            <ArrowLeft className="h-5 w-5" />
+          </Button>
+        </Link>
+      </div>
       <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
         <div>
           <h1 className="text-2xl font-bold">{T("Карта залу", "Floor plan")}</h1>
